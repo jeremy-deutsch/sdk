@@ -41,7 +41,7 @@ var f = ([int a = 0]) {};
     await assertErrorsInCode('''
 var f = ([int a]) {};
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 14, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 14, 1),
     ]);
   }
 
@@ -87,7 +87,7 @@ class C {
   C._();
 }
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 27, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 27, 1),
     ]);
   }
 
@@ -164,7 +164,7 @@ class C {
   C([int a]);
 }
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 19, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 19, 1),
     ]);
   }
 
@@ -199,7 +199,7 @@ class B extends A{
   B([int super.a]);
 }
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 61, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 61, 1),
     ]);
   }
 
@@ -212,7 +212,7 @@ class B extends A{
   B([int super.a]);
 }
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 66, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 66, 1),
     ]);
   }
 
@@ -397,7 +397,7 @@ void f([int a = 0]) {}
     await assertErrorsInCode('''
 void f([int a]) {}
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 12, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 12, 1),
     ]);
   }
 
@@ -631,7 +631,7 @@ class C {
   void foo([int a]) {}
 }
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 26, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 26, 1),
     ]);
   }
 
@@ -659,7 +659,7 @@ class A<T extends Object?> {
   void foo([T a]) {}
 }
 ''', [
-      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER, 43, 1),
+      error(CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER, 43, 1),
     ]);
   }
 }

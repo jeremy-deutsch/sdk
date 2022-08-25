@@ -670,6 +670,8 @@ CompileTimeErrorCode.MISSING_CONST_IN_SET_LITERAL:
   status: needsEvaluation
 CompileTimeErrorCode.MISSING_DART_LIBRARY:
   status: needsEvaluation
+CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER:
+  status: hasFix
 CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER:
   status: hasFix
 CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER_WITH_ANNOTATION:

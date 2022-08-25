@@ -992,6 +992,10 @@ class FixProcessor extends BaseProcessor {
     CompileTimeErrorCode.INVOCATION_OF_NON_FUNCTION_EXPRESSION: [
       RemoveParenthesesInGetterInvocation.new,
     ],
+    CompileTimeErrorCode
+        .MISSING_DEFAULT_VALUE_FOR_OPTIONAL_POSITIONAL_PARAMETER: [
+      MakeVariableNullable.new,
+    ],
     CompileTimeErrorCode.MISSING_DEFAULT_VALUE_FOR_PARAMETER: [
       AddRequiredKeyword.new,
       MakeVariableNullable.new,
